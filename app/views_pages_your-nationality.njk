@@ -1,0 +1,58 @@
+{% extends "layouts/custom-journey.njk" %}
+
+{% from "casa/components/input/macro.njk" import casaGovukInput with context %}
+{% from "components/details/macro.njk" import govukDetails with context %}
+{% from "components/error-message/macro.njk" import govukErrorMessage with context %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/assets/css/accessible-autocomplete.min.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block casaPageTitle %}
+  {{ t('your-nationality:field.nationality.label') }} {{ t('common:pageTitle.serviceName') }}
+{% endblock %}
+
+{% block journey_form %}
+  <h1 class="govuk-heading-xl">{{ t('your-nationality:field.nationality.label') }}</h1>
+
+  <p class="govuk-body govuk-!-margin-bottom-1">{{ t('your-nationality:field.nationality.hint') }}</p>
+  <div class="govuk-form-group govuk-body {%- if formErrors %} govuk-form-group--error{% endif %}">
+    {% if formErrors %}
+      {% set errorId = mergedParams.id + 'nationality-error' %}
+      {{ govukErrorMessage({
+        id: 'nationality-error',
+        classes: 'govuk-grid-column-two-thirds',
+        text: t(formErrors.nationality[0].inline),
+        visuallyHiddenText: t('your-nationality:field.nationality.error_text')
+      }) | indent(2) | trim }}
+    {% endif %}
+    <div id="nationality" name="nationality" class="autocomplete__wrapper govuk-!-width-one-half"></div>
+
+    {% if formData.nationality %}
+      <input hidden id="previousValue" value="{{ formData.nationality }}">
+    {% endif %}
+
+    <noscript>
+      <input type="hidden" id="noscript" name="noscript" value="true">
+      {{ casaGovukInput({
+        name: 'nationality_noscript',
+        value: formData.nationality_noscript,
+        classes: 'govuk-!-width-one-half',
+        casaErrors: formErrors
+      }) }}
+    </noscript>
+  </div>
+
+  {{ govukDetails({
+    summaryText: t('your-nationality:dualCitizenDetail.summaryText'),
+    text: t('your-nationality:dualCitizenDetail.text', { url: 'https://www.gov.uk/dual-citizenship'}) | safe,
+    classes: 'govuk-!-margin-top-8'
+  }) }}
+{% endblock %}
+
+{% block bodyEnd %}
+  {{ super() }}
+  <script type="text/javascript" src="/assets/js/accessible-autocomplete.min.js"></script>
+  <script type="text/javascript" src="/assets/js/auto-complete.js"></script>
+{% endblock %}
