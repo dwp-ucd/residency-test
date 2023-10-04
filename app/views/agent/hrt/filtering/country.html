@@ -29,9 +29,16 @@
   
   <br><br>
   
-               <button class="govuk-button" data-module="govuk-button" >
+               <!-- <button class="govuk-button" data-module="govuk-button" >
     Continue
-  </button>
+  </button> -->
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+    text: "Continue",
+    href: "/agent/hrt/filtering/abroad-6months-3years.html"
+  }) }}
            
           </div>
           </form>

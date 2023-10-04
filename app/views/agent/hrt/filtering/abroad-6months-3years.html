@@ -55,11 +55,17 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
   </fieldset>
 </div>
-                
+              
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/agent/hrt/filtering/work.html"
+}) }}
                   
-<button class="govuk-button" data-module="govuk-button" onclick="check1()">
+<!-- <button class="govuk-button" data-module="govuk-button" onclick="check1()">
   Continue
-</button>
+</button> -->
             </form>
 
 <script>

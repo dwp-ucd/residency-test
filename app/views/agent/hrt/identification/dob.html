@@ -21,9 +21,6 @@
 
         <div class="govuk-grid-column-two-thirds">
 
-          <form action="/citizen/habitual_residency_test/simple_hrt_v8a/fuzzy_logic.html" class="form">
-
-
                 <h1 class="govuk-heading-xl">What is the customer's date of birth?</h1>
               
                 <div id="dob-hint" class="govuk-hint">
@@ -56,13 +53,14 @@
                   </div>
                 </div>
   
-               <button class="govuk-button" data-module="govuk-button" >
-    Continue
-  </button>
+                {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                {{ govukButton({
+                  text: "Continue",
+                  href: "/agent/hrt/identification/postcode.html"
+                }) }}
            
           </div>
-          </form>
-  
 
   <!-- <details class="govuk-details govuk-!-margin-top-8" data-module="govuk-details">
   <summary class="govuk-details__summary">
