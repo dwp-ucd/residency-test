@@ -38,17 +38,15 @@
           John Smith<br><strong>does not need a factual HRT</strong>. 
         </div>
       </div>
+      <br>
 
-            {% from "govuk/components/button/macro.njk" import govukButton %}
-<br>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
 
-            <div class="govuk-button-group">
-                {{ govukButton({
-                    text: "Continue",
-                    href: "/agent/updated-address.html",
-                    preventDoubleClick: true
-                    }) }}
-              </div>
+      {{ govukButton({
+        text: "Continue",
+        href: "/agent/hrt/outcome/hab-res.html"
+      }) }}
+
     </div>
 </div>
 

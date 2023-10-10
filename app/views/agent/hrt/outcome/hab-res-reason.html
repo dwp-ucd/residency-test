@@ -33,10 +33,15 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
             <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
           </div>
 
-             <button class="govuk-button" data-module="govuk-button" onclick="check()">
+             <!-- <button class="govuk-button" data-module="govuk-button" onclick="check()">
   Confirm
-</button>
-           
+</button> -->
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/agent/hrt/outcome/end.html"
+}) }}
 </form>
             <script>
           function check() {
@@ -55,15 +60,9 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
         window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/presence.html"
       } else {
         window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/nationality_question_2.html"
-      }
-
-  
-    }
-  }
+      }}}
               </script>
-
         </div>
-
 </div>
 
 {% endblock %}

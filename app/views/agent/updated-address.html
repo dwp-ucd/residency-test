@@ -47,7 +47,6 @@ data-module="govuk-notification-banner">
 </div>
 </div>
 
-
             <form method="post">
 
             <fieldset class="govuk-fieldset">
@@ -61,52 +60,80 @@ data-module="govuk-notification-banner">
 
             {%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
-            <table class="govuk-table">
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th class="govuk-table__header" scope="col"> Current address </th>
-                  <td class="govuk-table__cell">
-                    5 Wellington House, Windsor Street, <br> South Gosforth, Newcastle upon Tyne, <br> NE3 1YL
-                  </td>
-                  <td class="govuk-table__cell">
-                    <!-- <a class="govuk-link" href="/agent/update-address/uk-or-international.html">Change</a> -->
-                  </td> 
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th class="govuk-table__header" scope="col"> Start date </th>
-                  <td class="govuk-table__cell">
-                    20 May 2023
-                  </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th class="govuk-table__header" scope="col"> Address type </th>
-                  <td class="govuk-table__cell">
-                    {{govukTag({
-                      text: "Permanent Residential",
-                      classes: "govuk-tag--green"
-                    })}}
-                  </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th class="govuk-table__header" scope="col"> Updated </th>
-                  <td class="govuk-table__cell">
-                    24 May 2023
-                  </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
-                </tr>
-              </tbody>
-
-            </table>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Current address
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                </dd> 
+                <dd class="govuk-summary-list__value">
+                  5 Wellington House, Windsor Street, <br> South Gosforth, Newcastle upon Tyne, <br> NE3 1YL
+                  </dd>
+                  
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Start date
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                </dd> 
+                <dd class="govuk-summary-list__value">
+                  20 May 2023
+                </dd>
+              
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address type
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                </dd> 
+                <dd class="govuk-summary-list__value">
+                  {{govukTag({
+                    text: "Permanent",
+                    classes: "govuk-tag--green"
+                  })}}
+                </dd>
+                
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address reason
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                </dd> 
+                <dd class="govuk-summary-list__value">
+                  {{govukTag({
+                    text: "Residential",
+                    classes: "govuk-tag--grey"
+                  })}}
+                </dd>
+                
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Building type
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                </dd> 
+                <dd class="govuk-summary-list__value">
+                
+                </dd>
+                
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Updated
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                </dd> 
+                <dd class="govuk-summary-list__value">
+                  24 May 2023
+                </dd>
+              
+              </div>
+              </dl>
 
             {% from "govuk/components/button/macro.njk" import govukButton %}
 
