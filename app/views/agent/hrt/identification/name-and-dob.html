@@ -1,7 +1,7 @@
-{% extends 'layout.html' %}
+{% extends 'layout-agent-no-details.html' %}
 
 {% block pageTitle %}
-    Residency Prototype
+    Name and date of birth
 {% endblock %}
 
 {% block beforeContent %}
@@ -71,9 +71,16 @@
                   </div>
                 </div>
   
-               <button class="govuk-button" data-module="govuk-button" >
+               <!-- <button class="govuk-button" data-module="govuk-button" >
     Continue
-  </button>
+  </button> -->
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+    text: "Continue",
+    href: "/agent/hrt/identification/postcode.html"
+  }) }}
            
           </div>
           </form>
