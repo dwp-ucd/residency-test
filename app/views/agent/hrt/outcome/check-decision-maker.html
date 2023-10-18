@@ -43,16 +43,28 @@
       {%- from "govuk/components/tag/macro.njk" import govukTag -%}
           
             <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Benefit
+                </dt>
+                
+                <dd class="govuk-summary-list__value">
+                  Carer's Allowance
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <!-- <a class="govuk-link" href="/agent/update-address/update-address-results.html">Evidence required</a> -->
+                </dd> 
+              </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                    Nationality
                   </dt>
                   
                   <dd class="govuk-summary-list__value">
-                    Brazilian
+                    French
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/update-address-results.html">Evidence required</a>
+                    <a class="govuk-link" href="#">Evidence provided</a>
                   </dd> 
                 </div>
                 <div class="govuk-summary-list__row">
@@ -61,24 +73,12 @@
                   </dt>
                   
                   <dd class="govuk-summary-list__value">
-                    Settled
+                    EU settled
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/update-address-results.html">Share code required</a>
+                    <a class="govuk-link" href="#">Share code provided</a>
                   </dd> 
                 </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Employment status
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Self-employed
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/move-in-date.html">Evidence required</a>
-                  </dd> 
-                </div>
-                
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     Residency
@@ -87,9 +87,20 @@
                    Lives in the UK
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/address-type.html">Evidence requried</a>
+                    <a class="govuk-link" href="#">Evidence provided</a>
                   </dd> 
                   
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Special needs
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    None
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <!-- <a class="govuk-link" href="/agent/update-address/move-in-date.html">Evidence required</a> -->
+                  </dd> 
                 </div>
                 <!-- <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
@@ -108,7 +119,7 @@
 
             {{ govukButton({
               text: "Continue",
-              href: "/agent/hrt/outcome/result-no.html"
+              href: "/agent/hrt/outcome/result-no-new.html"
             }) }}
     </div>
 </div>

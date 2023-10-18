@@ -1,7 +1,7 @@
 dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-    Country
+    Decision
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,22 +24,29 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-        Which country did the customer travel to?
+        Does the customer need a factual HRT?
       </h1>
     </legend>
-    
-    <br/>
+    <br>
     
     <div id="dob-hint" class="govuk-hint">
-      Enter the country below
+      Record your decision below
     </div>
     
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="country">
-          Country
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Yes
         </label>
-        <input class="govuk-input govuk-input--width-10" id="country" name="country" type="text" autocomplete="country">
       </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changedName-2">
+          No
+        </label>
+      </div>
+    </div>
 
   </fieldset>
 </div>
@@ -48,7 +55,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {{ govukButton({
   text: "Continue",
-  href: "/agent/hrt/filtering/special-needs.html"
+  href: "/agent/hrt/outcome/hab-res.html"
 }) }}
 
 <!-- {% from "govuk/components/details/macro.njk" import govukDetails %}

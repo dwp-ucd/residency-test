@@ -1,7 +1,7 @@
-dwp-res-prototype{% extends 'layout-agent.html' %}
+dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
 
 {% block pageTitle %}
-    Country
+    Reference number
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,19 +24,19 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-        Which country did the customer travel to?
+        Case reference number
       </h1>
     </legend>
     
     <br/>
     
     <div id="dob-hint" class="govuk-hint">
-      Enter the country below
+      Enter the case reference number below
     </div>
     
       <div class="govuk-form-group">
         <label class="govuk-label" for="country">
-          Country
+          Reference number
         </label>
         <input class="govuk-input govuk-input--width-10" id="country" name="country" type="text" autocomplete="country">
       </div>
@@ -47,8 +47,8 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Continue",
-  href: "/agent/hrt/filtering/special-needs.html"
+  text: "Find case",
+  href: "/agent/hrt/outcome/check-decision-maker.html"
 }) }}
 
 <!-- {% from "govuk/components/details/macro.njk" import govukDetails %}

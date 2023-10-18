@@ -1,7 +1,7 @@
 {% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-    Confirm address
+    Summary
 {% endblock %}
 
 {% block beforeContent %}
@@ -34,7 +34,7 @@
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       
           <h1 class="govuk-fieldset__heading">
-            Confirm the address update
+            Summary
           </h1>
         </legend>
 
@@ -43,101 +43,84 @@
       {%- from "govuk/components/tag/macro.njk" import govukTag -%}
           
             <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                   New address
-                  </dt>
-                  
-                  <dd class="govuk-summary-list__value">
-                    5 Wellington House, Windsor Street, South Gosforth, <br> Newcastle upon Tyne, NE3 1YL
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/update-address-results.html">Change</a>
-                  </dd> 
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Start date
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    20 May 2023
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/move-in-date.html">Change</a>
-                  </dd> 
-                </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Benefit
+                </dt>
                 
+                <dd class="govuk-summary-list__value">
+                  Carer's Allowance
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/agent/hrt/filtering/benefit.html">Change</a>
+                </dd> 
+              </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Address type
+                   Nationality
                   </dt>
+                  
                   <dd class="govuk-summary-list__value">
-                    {{govukTag({
-                      text: "Permanent residential",
-                      classes: "govuk-tag--green"
-                    })}}
+                    French
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/address-type.html">Change</a>
+                    <a class="govuk-link" href="#">Evidence required</a> <br> <br> <a class="govuk-link" href="/agent/hrt/filtering/benefit.html">Change</a>
+                  </dd> 
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                   Immigration status
+                  </dt>
+                  
+                  <dd class="govuk-summary-list__value">
+                    EU settled
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Share code required</a> <br> <br> <a class="govuk-link" href="/agent/hrt/filtering/visa-status.html">Change</a>
+                  </dd> 
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Residency
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                   Lives in the UK
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Evidence requried</a> <br> <br> <a class="govuk-link" href="/agent/hrt/filtering/presence.html">Change</a>
                   </dd> 
                   
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Special needs
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    None
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="/agent/hrt/filtering/special-needs.html">Change</a>
+                  </dd> 
                 </div>
                 <!-- <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Address reason
+                    Outcome
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    {{govukTag({
-                      text: "Residential",
-                      classes: "govuk-tag--grey"
-                    })}}
+                    Needs a factual HRT 
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/address-type.html">Change</a>
+                    <a class="govuk-link" href="/agent/update-address/address-type.html">Start</a>
                   </dd> 
-                  
                 </div> -->
-                <br>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Previous address
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    18 Burdett House, Main Street, <br> Guildford, GU79 6YW
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    End date
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    19 May 2023
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <!-- <a class="govuk-link" href="/agent/update-address/move-out-date.html">Change</a> -->
-                  </dd> 
-                </div>
             </dl>   
 
             {% from "govuk/components/button/macro.njk" import govukButton %}
 
-            <div class="govuk-button-group">
-                {{ govukButton({
-                    text: "Confirm",
-                    href: "/agent/updated-address.html",
-                    preventDoubleClick: true
-                    }) }}
-
-                    {{ govukButton({
-                      text: "Cancel",
-                      classes: "govuk-button--warning",
-                      href: "/agent/update-address/abandon-journey.html"
-                    }) }}
-
-                <!-- <a class="govuk-link" href="/agent/update-address/abandon-journey.html">Cancel</a> -->
-              </div>
+            {{ govukButton({
+              text: "Confirm",
+              href: "/agent/hrt/outcome/end-processing-agent.html"
+            }) }}
     </div>
 </div>
 
