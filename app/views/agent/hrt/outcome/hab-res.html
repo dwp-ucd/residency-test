@@ -23,14 +23,13 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
         
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
         Is the customer habitual resident?
       </h1>
     </legend>
-    <br>
   
-    <div class="govuk-radios govuk-radios">
+    <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="nationality" name="nationality" type="radio" value="british">
         <label class="govuk-label govuk-radios__label" for="nationality">
@@ -48,18 +47,18 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
     </div>
 
   </fieldset>
-</div>
-
-             <!-- <button class="govuk-button" data-module="govuk-button" onclick="check()">
-  Continue
-</button> -->
-
-{% from "govuk/components/button/macro.njk" import govukButton %}
+  <br>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
   text: "Continue",
   href: "/agent/hrt/outcome/hab-res-reason.html"
 }) }}
+</div>
+
+             <!-- <button class="govuk-button" data-module="govuk-button" onclick="check()">
+  Continue
+</button> -->
            
 </form>
             <script>

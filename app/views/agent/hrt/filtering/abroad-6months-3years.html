@@ -22,17 +22,16 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Has the customer been abroad for more than 6 months in the last 3 years ?
+        Have they been abroad for more than 6 months in the last 3 years ?
       </h1>
     </legend>
     
-    <br/>
    <div id="nationality-hint" class="govuk-hint">
-    Select ‘Yes’ if they have spent more than 6 months outside the United Kingdom, the Isle of Man or the Channel Islands in the past 36 months. The 6 months do not need to be continuous.  
-    <br>  <br>
-    <div class="govuk-radios govuk-radios">
+    Select ‘Yes’ if they have spent more than 6 months outside the United Kingdom, the Isle of Man or the Channel Islands in the past 36 months. The 6 months do not need to be continuous.  </div>
+    
+    <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="presence" name="presence" type="radio" value="yes">
         <label class="govuk-label govuk-radios__label" for="presence">
@@ -88,12 +87,8 @@ function check1() {
 </script>
 
         </div>
-
-</div>
+      </div>
  
-        </div>
-
-</div>
 
 {% endblock %}
 

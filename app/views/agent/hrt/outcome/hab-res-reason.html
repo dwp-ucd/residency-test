@@ -23,9 +23,9 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
        
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Can you provide more detail?
+                  What is the reason behind your decision?
                 </h1>
               </legend>
               <div id="waste-hint" class="govuk-hint">
@@ -35,19 +35,31 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
                   <label class="govuk-label govuk-checkboxes__label" for="waste">
-                    Customer did not need a factual HRT
+                    Right to reside
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
                   <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                    Customer passed the factual HRT
+                    Presence
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
                   <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                    Customer is British
+                   Past presence
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                   Factual habitual residence test
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                   Exemption rule
                   </label>
                 </div>
               </div>
