@@ -66,12 +66,6 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
           PIP
         </label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="nationality-2" name="nationality" type="radio" value="irish">
-        <label class="govuk-label govuk-radios__label" for="nationality-2">
-          Other
-        </label>
-      </div>
     </div>
 
   </fieldset>
@@ -81,7 +75,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {{ govukButton({
   text: "Continue",
-  href: "/agent/hrt/filtering/nationality.html"
+  href: "/agent/hrt-v3/filtering/nationality.html"
 }) }}
 
              <!-- <button class="govuk-button" data-module="govuk-button" onclick="check()">
@@ -106,11 +100,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
         window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/presence.html"
       } else {
         window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/nationality_question_2.html"
-      }
-
-  
-    }
-  }
+      }}}
               </script>
 
         </div>
