@@ -24,12 +24,12 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Which country did the customer travel to?
+        Where did they travel to?
       </h1>
     </legend>
     
     <div id="dob-hint" class="govuk-hint">
-      Enter the country below.
+      Enter the last country that the customer went to before arriving to the UK.
     </div>
     
       <div class="govuk-form-group">
@@ -46,7 +46,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {{ govukButton({
   text: "Continue",
-  href: "/agent/hrt/filtering/exemptions.html"
+  href: "/agent/hrt-v3/filtering/exemptions.html"
 }) }}
 
 <!-- {% from "govuk/components/details/macro.njk" import govukDetails %}

@@ -32,29 +32,34 @@
 
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      
           <h1 class="govuk-fieldset__heading">
             Summary
           </h1>
         </legend>
-
       </fieldset>
 
-      {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+      <dl class="govuk-summary-list">
+       
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+           Benefit
+          </dt>
+          
+          <dd class="govuk-summary-list__value">
+            Carer's Allowance
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/agent/hrt-v3/filtering/benefit.html">Change</a>
+          </dd> 
+        </div>
+      </dl>  
           
             <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                 Benefit
-                </dt>
-                
-                <dd class="govuk-summary-list__value">
-                  Carer's Allowance
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="/agent/hrt/filtering/benefit.html">Change</a>
-                </dd> 
-              </div>
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Right to reside
+                </h1>
+              </legend>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                    Nationality
@@ -64,7 +69,9 @@
                     French
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Evidence required</a> <br> <br> <a class="govuk-link" href="/agent/hrt/filtering/benefit.html">Change</a>
+                    <!-- <a class="govuk-link" href="#">Evidence required</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/benefit.html">Change</a> -->
+                    <a class="govuk-link" href="/agent/hrt-v3/filtering/nationality.html">Change</a>
+
                   </dd> 
                 </div>
                 <div class="govuk-summary-list__row">
@@ -76,20 +83,67 @@
                     EU pre-settled
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Evidence required</a> <br> <br> <a class="govuk-link" href="/agent/hrt/filtering/visa-status.html">Change</a>
+                    <!-- <a class="govuk-link" href="#">Evidence required</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/visa-status.html">Change</a> -->
+                    <a class="govuk-link" href="/agent/hrt-v3/filtering/visa-status.html">Change</a>
+
                   </dd> 
                 </div>
+              
+            </dl>  
+            
+            <dl class="govuk-summary-list">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Presence
+                </h1>
+              </legend>
+              
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Residency
+                    Presence
                   </dt>
                   <dd class="govuk-summary-list__value">
                    Lives in the UK
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Evidence requried</a> <br> <br> <a class="govuk-link" href="/agent/hrt/filtering/presence.html">Change</a>
+                    <!-- <a class="govuk-link" href="#">Evidence requried</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/presence.html">Change</a> -->
+                    <a class="govuk-link" href="/agent/hrt-v3/filtering/presence.html">Change</a>
+
+                  </dd> 
+                </div>
+            </dl>   
+
+            <dl class="govuk-summary-list">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Past presence
+                </h1>
+              </legend>
+             
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Travel abroad
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                   No
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <!-- <a class="govuk-link" href="#">Evidence requried</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/presence.html">Change</a> -->
+                    <a class="govuk-link" href="/agent/hrt-v3/filtering/abroad-6months-3years.html">Change</a>
+
                   </dd> 
                   
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Originating country
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <!-- <a class="govuk-link" href="/agent/hrt-v3/filtering/country.html">Change</a> -->
+                  </dd> 
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
@@ -99,28 +153,23 @@
                     None
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/hrt/filtering/exemptions.html">Change</a>
+                    <a class="govuk-link" href="/agent/hrt-v3/filtering/exemptions.html">Change</a>
                   </dd> 
                 </div>
-                <!-- <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Outcome
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Needs a factual HRT 
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/address-type.html">Start</a>
-                  </dd> 
-                </div> -->
+
             </dl>   
 
             {% from "govuk/components/button/macro.njk" import govukButton %}
 
             {{ govukButton({
               text: "Confirm",
-              href: "/agent/hrt/outcome/end-processing-agent.html"
+              href: "/agent/hrt-v3/outcome/end-processing-agent.html"
             }) }}
+
+            <div>
+              <a href="/agent/hrt-v3/outcome/evidence.html" class="govuk-body-m">Request and provide evidence
+            </a>
+            </div>
     </div>
 </div>
 

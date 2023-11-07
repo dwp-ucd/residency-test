@@ -25,7 +25,7 @@ Exemptions
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Do any of the following apply to the customer?
+        Do any of the following exemptions apply to the customer?
       </h1>
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
@@ -38,19 +38,13 @@ Exemptions
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="type-4" name="type" type="radio" value="true" data-aria-controls="conditional-type-4">
         <label class="govuk-label govuk-radios__label" for="type-4">
-          Terminal illness
+          Special rules
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="type" name="type" type="radio" value="true" data-aria-controls="conditional-type">
         <label class="govuk-label govuk-radios__label" for="type">
-          Coming from an exception country
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="type" name="type" type="radio" value="true" data-aria-controls="conditional-type">
-        <label class="govuk-label govuk-radios__label" for="type">
-          Refugee
+          Coming from an exemption country
         </label>
       </div>
       <div class="govuk-radios__item">
@@ -59,7 +53,7 @@ Exemptions
           None
         </label>
       </div>
-      <div class="govuk-radios__item">
+      <!-- <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="type-5" name="type" type="radio" value="true" data-aria-controls="conditional-type-5">
         <label class="govuk-label govuk-radios__label" for="type-5">
           Other
@@ -69,7 +63,7 @@ Exemptions
         <div class="govuk-form-group">
           <input class="govuk-input govuk-!-width-one-third" id="conditional-type-5" name="type" type="text" autocomplete="text">
         </div>
-      </div>
+      </div> -->
     </div>
   </fieldset>
 </div>
@@ -82,7 +76,7 @@ Exemptions
 
 {{ govukButton({
   text: "Continue",
-  href: "/agent/hrt/outcome/check.html"
+  href: "/agent/hrt-v3/outcome/check.html"
 }) }}
 
 </form>

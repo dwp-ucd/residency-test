@@ -33,13 +33,13 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
     
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="presence" name="presence" type="radio" value="yes">
+        <input class="govuk-radios__input" id="abroad-yes" name="abroad" type="radio" value="yes">
         <label class="govuk-label govuk-radios__label" for="presence">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="presence-2" name="presence" type="radio" value="no">
+        <input class="govuk-radios__input" id="abroad-no" name="abroad" type="radio" value="no">
         <label class="govuk-label govuk-radios__label" for="presence-2">
           No
         </label>
@@ -54,23 +54,16 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
   </fieldset>
 </div>
-              
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Continue",
-  href: "/agent/hrt/filtering/country.html"
-}) }}
                   
-<!-- <button class="govuk-button" data-module="govuk-button" onclick="check1()">
+<button class="govuk-button" data-module="govuk-button" onclick="check1()">
   Continue
-</button> -->
+</button>
             </form>
 
 <script>
 function check1() {
   console.log('in function')
-  var radios = document.getElementsByName("presence");
+  var radios = document.getElementsByName("abroad");
   var hasSelection = false
   for (var i = 0, len = radios.length; i < len; i++) {
     if (radios[i].checked) {
@@ -78,12 +71,13 @@ function check1() {
     }
   }
   if (!hasSelection) {
-    window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/continue_application_error.html";
+    window.location.href = "/agent/hrt-v3/filtering/abroad-6months-3years-error.html";
   } else {
-    window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/confirm_residence.html"
-
-  }
-}
+    if (document.getElementById("abroad-yes").checked) {
+        window.location.href = "/agent/hrt-v3/filtering/country.html"
+      } else {
+        window.location.href = "/agent/hrt-v3/filtering/exemptions.html.html"
+      }}}
 </script>
 
         </div>
