@@ -24,21 +24,51 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Where did they travel to?
+        What are their share code details?
       </h1>
     </legend>
     
     <div id="dob-hint" class="govuk-hint">
-      Enter the last country that the customer went to before arriving to the UK.
+      Enter the share code.
     </div>
     
       <div class="govuk-form-group">
         <label class="govuk-label" for="country">
-          Country
+          Share code
         </label>
         <input class="govuk-input govuk-input--width-10" id="country" name="country" type="text" autocomplete="country">
       </div>
 
+    <div id="dob-hint" class="govuk-hint">
+      Enter the expiration date of the share code.
+    </div>
+
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" autocomplete="bday-day" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" inputmode="numeric">
+        </div>
+      </div>
+    </div>
   </fieldset>
 </div>
               
@@ -46,7 +76,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {{ govukButton({
   text: "Continue",
-  href: "/agent/hrt-v3/filtering/abroad-dates.html"
+  href: "/agent/hrt-v3/filtering/presence.html"
 }) }}
 
 <!-- {% from "govuk/components/details/macro.njk" import govukDetails %}
