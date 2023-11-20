@@ -90,23 +90,16 @@
 </div>
     
 <script>
-  function check() {
-    console.log('in function')
-    var radios = document.getElementsByName("type");
-    var hasSelection = false
-    for (var i = 0, len = radios.length; i < len; i++) {
-      if (radios[i].checked) {
-        hasSelection = true;
-      }
-    }
-    if (!hasSelection) {
-      window.location.href = "/agent/update-address/perm-or-temp-error.html";
+  function check3() {
+    console.log(document.getElementById("yes"))
+
+    if (document.getElementById("address-line-1").value && document.getElementById("address-town").value && document.getElementById("address-postcode").value ) {
+      window.location.href = "/agent/update-address/address-type-manual.html"
     } else {
-      if (document.getElementById("permanent").checked) {
-        window.location.href = "/agent/update-address/uk-or-international.html"
-      } else {
-        window.location.href = "/agent/update-address/temp-unavailable.html"
-      }}}
+      window.location.href = "/agent/update-address/manual-entry-match-error.html"
+    }
+
+  }
 </script>
 
 <!-- {{ govukButton({
