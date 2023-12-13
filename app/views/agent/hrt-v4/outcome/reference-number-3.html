@@ -1,0 +1,120 @@
+dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
+
+{% block pageTitle %}
+    Reference number
+{% endblock %}
+
+{% block beforeContent %}
+
+    {{ super() }}
+
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+  Cases
+</h1>
+</legend>
+
+<div id="dob-hint" class="govuk-hint">
+Enter the case reference number below.
+</div>
+
+<div><input class="govuk-input govuk-input--width-10" id="country" name="country" type="text" autocomplete="country"></div>
+
+<br>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Reference number</th>
+            <th scope="col" class="govuk-table__header">Benefit line</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-decision-maker.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">Pension Credit</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-decision-maker.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">New Style Employment Support Allowance</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-decision-maker.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">Maternity Allowance</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-decision-maker.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">Personal Independence Payment</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-decision-maker.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">Pension Credit</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-decision-maker.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">Pension Credit</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-decision-maker.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">Carer's Allowance</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-decision-maker.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">Attendance Allowance</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-decision-maker.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">Attendance Allowance</td>
+          </tr>
+        </tbody>
+      </table>
+
+      {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+      {{ govukPagination({
+        previous: {
+          href: "reference-number-2.html"
+        },
+      
+        items: [
+          {
+            number: 1,
+            href: "reference-number.html"
+          },
+          {
+            number: 2,
+            href: "reference-number-2.html"
+          },
+          {
+            number: 3,
+            current: true,
+            href: "reference-number-3.html"
+          }
+        ]
+      }) }}
+
+      <div>
+        <a href="/agent/hrt-v4/outcome/reference-number-manual.html" class="govuk-body-m">Enter case reference number manually
+      </a>
+      </div>
+</fieldset>
+</div>
+
+</div>
+</div>
+
+{% endblock %}
