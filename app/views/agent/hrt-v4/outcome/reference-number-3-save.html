@@ -1,7 +1,7 @@
 dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
 
 {% block pageTitle %}
-    Case tasks
+Case tasks
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,6 +30,22 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="region"
+    aria-labelledby="govuk-notification-banner-title"
+    data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Success
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        Progress has been saved
+      </h3>
+      <p class="govuk-body">You have succesfully updated case <strong>HDJ2123F</strong>.</p>
+    </div>
+    </div>
 
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
@@ -80,8 +96,8 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
       <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">HDJ2123F</a></th>
       <td class="govuk-table__cell">Pension Credit</td>
       <td class="govuk-table__cell">
-        <strong class="govuk-tag govuk-tag--blue">
-          To do
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
         </strong>
       </td>
 
@@ -100,8 +116,8 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
       <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">HDJ2123F</a></th>
       <td class="govuk-table__cell">Attendance Allowance</td>
       <td class="govuk-table__cell">
-        <strong class="govuk-tag govuk-tag--yellow">
-          In progress
+        <strong class="govuk-tag govuk-tag--red">
+          Waiting on
         </strong>
       </td>
 
@@ -109,16 +125,6 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">HDJ2123F</a></th>
       <td class="govuk-table__cell">Disability Living Allowance</td>
-      <td class="govuk-table__cell">
-        <strong class="govuk-tag govuk-tag--yellow">
-          In progress
-        </strong>
-      </td>
-
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">HDJ2123F</a></th>
-      <td class="govuk-table__cell">Pension Credit</td>
       <td class="govuk-table__cell">
         <strong class="govuk-tag govuk-tag--red">
           Waiting on
@@ -128,10 +134,20 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">HDJ2123F</a></th>
+      <td class="govuk-table__cell">Pension Credit</td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Done
+        </strong>
+      </td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">HDJ2123F</a></th>
       <td class="govuk-table__cell">Personal Independence Payment</td>
       <td class="govuk-table__cell">
-        <strong class="govuk-tag govuk-tag--blue">
-         To do
+        <strong class="govuk-tag govuk-tag--green">
+          Done
         </strong>
       </td>
 
@@ -140,8 +156,8 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
       <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">HDJ2123F</a></th>
       <td class="govuk-table__cell">Pension Credit</td>
       <td class="govuk-table__cell">
-        <strong class="govuk-tag govuk-tag--yellow">
-          In progress
+        <strong class="govuk-tag govuk-tag--green">
+          Done
         </strong>
       </td>
 
@@ -153,24 +169,22 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
 
       {{ govukPagination({
         previous: {
-          href: "reference-number.html"
+          href: "reference-number-2-save.html"
         },
-        next: {
-          href: "reference-number-3.html"
-        },
+      
         items: [
           {
             number: 1,
-            href: "reference-number.html"
+            href: "reference-number-save.html"
           },
           {
             number: 2,
-            current: true,
-            href: "reference-number-2.html"
+            href: "reference-number-2-save.html"
           },
           {
             number: 3,
-            href: "reference-number-3.html"
+            current: true,
+            href: "reference-number-3-save.html"
           }
         ]
       }) }}

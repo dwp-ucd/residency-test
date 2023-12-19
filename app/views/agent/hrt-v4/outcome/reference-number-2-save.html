@@ -31,6 +31,22 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="region"
+    aria-labelledby="govuk-notification-banner-title"
+    data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Success
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        Progress has been saved
+      </h3>
+      <p class="govuk-body">You have succesfully updated case <strong>HDJ2123F</strong>.</p>
+    </div>
+    </div>
+
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -153,24 +169,24 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
 
       {{ govukPagination({
         previous: {
-          href: "reference-number.html"
+          href: "reference-number-save.html"
         },
         next: {
-          href: "reference-number-3.html"
+          href: "reference-number-3-save.html"
         },
         items: [
           {
             number: 1,
-            href: "reference-number.html"
+            href: "reference-number-save.html"
           },
           {
             number: 2,
             current: true,
-            href: "reference-number-2.html"
+            href: "reference-number-2-save.html"
           },
           {
             number: 3,
-            href: "reference-number-3.html"
+            href: "reference-number-3-save.html"
           }
         ]
       }) }}
