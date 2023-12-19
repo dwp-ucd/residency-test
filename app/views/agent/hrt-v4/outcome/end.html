@@ -28,6 +28,10 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {% block content %}
 
+<div class="govuk-exit-this-page" data-module="govuk-exit-this-page"><a href="/agent/hrt-v4/outcome/reference-number.html" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-exit-this-page__button govuk-js-exit-this-page-button" data-module="govuk-button" rel="nofollow noreferrer">
+  <span class="govuk-visually-hidden">Emergency</span> Exit this page
+</a></div>
+
 <div class="govuk-grid-row">
 
         <div class="govuk-grid-column-two-thirds">
@@ -102,10 +106,15 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   </div>
 </div>
 
-<p class="govuk-body">Please continue with the claim process.</p>
+<!-- <p class="govuk-body">Please continue with the claim process.</p> -->
 
-             <button class="govuk-button" data-module="govuk-button" onclick="check()">Continue</button>
-           
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Back to case tasks",
+  href: "/agent/hrt-v4/outcome/reference-number.html"
+}) }}
+
 </form>
 
         </div>
