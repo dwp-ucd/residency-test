@@ -1,7 +1,7 @@
 dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-   Habitual residence
+   Right to reside decision
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,7 +25,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Based on the information you have reviewed, are they habitually resident?
+        Based on the information and evidence you have reviewed, does the customer have the right to reside in the UK?
       </h1>
     </legend>
   
@@ -52,7 +52,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 <div class="govuk-button-group">
   {{ govukButton({
     text: "Save and continue",
-    href: "/agent/hrt-v4/outcome/check.html"
+    href: "/agent/hrt-v4/outcome/check-presence.html"
 
   }) }}
 
