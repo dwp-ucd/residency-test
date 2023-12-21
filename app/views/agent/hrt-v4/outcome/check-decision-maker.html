@@ -1,7 +1,7 @@
 {% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-    Summary
+    Information review
 {% endblock %}
 
 {% block beforeContent %}
@@ -201,17 +201,24 @@
 
             </dl>   
 
-            {% from "govuk/components/button/macro.njk" import govukButton %}
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Save and continue",
+                href: "/agent/hrt-v4/outcome/evidence-decision-maker.html"
+            
+              }) }}
+            
+              {{ govukButton({
+                text: "Save and exit",
+                classes: "govuk-button--secondary",
+                href: "/agent/hrt-v4/outcome/reference-number-saved.html"
+              }) }}
+            </div>
 
-            {{ govukButton({
-              text: "Continue",
-              href: "/agent/hrt-v4/outcome/result-no-new.html"
-            }) }}
-
-            <div>
+            <!-- <div>
               <a href="/agent/hrt-v4/outcome/evidence-dm.html" class="govuk-body-m">Evidence provided
             </a>
-            </div>
+            </div> -->
 
     </div>
 </div>
