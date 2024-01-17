@@ -6,6 +6,17 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {% block beforeContent %}
 
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
     {{ super() }}
 
     {{ govukBackLink ({
@@ -24,12 +35,12 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Have they been abroad for 4 weeks or more in the last 2 years?
+        Have they been abroad for 6 months or more in the last 3 years?
       </h1>
     </legend>
     
    <div id="nationality-hint" class="govuk-hint">
-    Select ‘Yes’ if they have spent 4 weeks or more outside the United Kingdom, the Isle of Man or the Channel Islands in the past 2 years. The 4 weeks do not need to be continuous.  </div>
+    Select ‘Yes’ if they have spent 6 months or more outside the United Kingdom, the Isle of Man or the Channel Islands in the past 3 years. The 6 months do not need to be continuous.  </div>
     
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
@@ -53,11 +64,13 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
     </div>
 
   </fieldset>
+<br>
+  <button class="govuk-button" data-module="govuk-button" onclick="check1()">
+    Continue
+  </button>
+
 </div>
                   
-<button class="govuk-button" data-module="govuk-button" onclick="check1()">
-  Continue
-</button>
             </form>
 
 <script>

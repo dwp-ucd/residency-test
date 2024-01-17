@@ -6,6 +6,17 @@ Exemptions
 
 {% block beforeContent %}
 
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
     {{ super() }}
 
     {{ govukBackLink ({
@@ -25,7 +36,7 @@ Exemptions
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Do any of the following exemptions apply to the customer?
+        Which of the following exemptions apply to the customer?
       </h1>
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
