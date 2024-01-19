@@ -31,13 +31,14 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 <div class="govuk-grid-row">
 
         <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-caption-l">Right to reside</span>
         
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Does the customer have recourse to public funds?
-      </h1>
+      <h2 class="govuk-fieldset__heading">
+        Do they have recourse to public funds?
+      </h2>
     </legend>
   
     <div class="govuk-radios govuk-radios--inline">
@@ -68,7 +69,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   }) }}
 
   {{ govukButton({
-    text: "Save and exit",
+    text: "Save and come back later",
     classes: "govuk-button--secondary",
     href: "#"
   }) }}

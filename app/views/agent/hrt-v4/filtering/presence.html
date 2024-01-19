@@ -1,7 +1,7 @@
 {% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-Residency
+Presence
 {% endblock %}
 
 {% block beforeContent %}
@@ -42,16 +42,18 @@ Residency
 
         <div class="govuk-grid-column-two-thirds">
 
+          <span class="govuk-caption-l">Presence</span>
+
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="presence-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Does the customer live in the United Kingdom?
+        Do they live in the UK, the Isle of Man or the Channel Islands?
       </h1>
     </legend>
         
-        <div id="nationality-hint" class="govuk-hint">
-          Select ‘Yes’ if they currently live in England, Scotland, Wales, Northern Ireland, the Isle of Man, or the Channel Islands.  </div>
+        <!-- <div id="nationality-hint" class="govuk-hint">
+          The UK means England, Scotland, Wales, and Northern Ireland.  </div> -->
               
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
@@ -70,12 +72,21 @@ Residency
 
   </fieldset>
   <br>
-  {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Continue",
-  href: "/agent/hrt-v4/filtering/abroad-6months-3years.html"
-}) }}
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/agent/hrt-v4/filtering/abroad-2years-3years.html"
+  
+    }) }}
+  
+    {{ govukButton({
+      text: "Save and come back later",
+      classes: "govuk-button--secondary",
+      href: "#"
+    }) }}
+  </div>
+
 </div>
                 
 <!-- <button class="govuk-button" data-module="govuk-button" onclick="check1()">

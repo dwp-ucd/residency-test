@@ -1,7 +1,7 @@
 dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-   Leave
+    Country
 {% endblock %}
 
 {% block beforeContent %}
@@ -36,48 +36,55 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h2 class="govuk-fieldset__heading">
-        Have they been abroad for 6 months or more in the last 3 years?
+        Where did they travel to?
       </h2>
     </legend>
     
-   <div id="nationality-hint" class="govuk-hint">
-    Select ‘Yes’ if they have spent 6 months or more outside the United Kingdom, the Isle of Man or the Channel Islands in the past 3 years. The 6 months do not need to be continuous.  </div>
-    
-    <div class="govuk-radios govuk-radios--inline">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="abroad-yes" name="abroad" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="presence">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="abroad-no" name="abroad" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="presence-2">
-          No
-        </label>
-      </div>
-      <!-- <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="presence-3" name="presence" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="presence-2">
-          Not sure
-        </label>
-      </div> -->
+    <div id="dob-hint" class="govuk-hint">
+      You can add more trips later.
     </div>
+    
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="country">
+          Country
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="country" name="country" type="text" autocomplete="country">
+      </div>
 
   </fieldset>
-<br>
-  <button class="govuk-button" data-module="govuk-button" onclick="check1()">
-    Continue
-  </button>
-
 </div>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Save and continue",
+                href: "/agent/hrt-v4/filtering/abroad-dates-2.html"
+              }) }}
+
+              {{ govukButton({
+                text: "Save and come back later",
+                classes: "govuk-button--secondary",
+                href: "#"
+              }) }}
+            </div>
+
+<!-- {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{{ govukDetails({
+  summaryText: "What to do if the customer has traveled from several countries?",
+  text: "If the customer has travelled from several countries, enter the one they have spent the most time in."
+}) }} -->
                   
+<!-- <button class="govuk-button" data-module="govuk-button" onclick="check1()">
+  Continue
+</button> -->
             </form>
 
 <script>
 function check1() {
   console.log('in function')
-  var radios = document.getElementsByName("abroad");
+  var radios = document.getElementsByName("presence");
   var hasSelection = false
   for (var i = 0, len = radios.length; i < len; i++) {
     if (radios[i].checked) {
@@ -85,18 +92,21 @@ function check1() {
     }
   }
   if (!hasSelection) {
-    window.location.href = "/agent/hrt-v3/filtering/abroad-6months-3years-error.html";
+    window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/continue_application_error.html";
   } else {
-    if (document.getElementById("abroad-yes").checked) {
-        window.location.href = "/agent/hrt-v4/filtering/country.html"
-      } else {
-        window.location.href = "/agent/hrt-v4/filtering/exemptions.html.html"
-      }}}
+    window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/confirm_residence.html"
+
+  }
+}
 </script>
 
         </div>
-      </div>
+
+</div>
  
+        </div>
+
+</div>
 
 {% endblock %}
 

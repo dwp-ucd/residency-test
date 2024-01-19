@@ -31,31 +31,41 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
+          <span class="govuk-caption-l">Right to reside</span>
+
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        What are their share code details?
-      </h1>
+      <h2 class="govuk-fieldset__heading">
+        Share code details
+      </h2>
     </legend>
 
+    <p class="govuk-body">If you do not have these details, you can <a class="govuk-link" href="/agent/hrt-v4/filtering/presence.html">skip this page for now</a>.</p>
+
+    <br>
+
     <div class="govuk-form-group">
-      <label class="govuk-label" for="address-postcode">
-        Share code
-      </label>
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h2 class="govuk-fieldset__heading">
+          Share code
+        </h2>
+      </legend>
       <div id="postcode-hint" class="govuk-hint">
-        For example, 9XY-6GY-2S2.
+        For example, A12 345 67G.
     </div>
-      <input class="govuk-input govuk-input--width-5" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
     </div>
 
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-        <legend class="govuk-fieldset__legend">
-          When is the share code valid from?
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Share code valid from
+          </h2>
         </legend>
         <div id="passport-issued-hint" class="govuk-hint">
-          For example, 27 3 2007
+          For example, 27 3 2007.
         </div>
         <div class="govuk-date-input" id="passport-issued">
           <div class="govuk-date-input__item">
@@ -88,11 +98,13 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-        <legend class="govuk-fieldset__legend">
-          When does the share code expire?
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Share code expiry date
+          </h2>
         </legend>
         <div id="passport-issued-hint" class="govuk-hint">
-          For example, 27 3 2007
+          For example, 27 3 2007.
         </div>
         <div class="govuk-date-input" id="passport-issued">
           <div class="govuk-date-input__item">
@@ -130,27 +142,16 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 <div class="govuk-button-group">
   {{ govukButton({
-    text: "Continue",
+    text: "Save and continue",
     href: "/agent/hrt-v4/filtering/presence.html"
   }) }}
 
   {{ govukButton({
-    text: "Skip this question",
-    href: "/agent/hrt-v4/filtering/presence.html",
+    text: "Save and come back later",
+    href: "#",
     classes: "govuk-button--secondary"
   }) }}
 </div>
-
-<!-- {% from "govuk/components/details/macro.njk" import govukDetails %}
-
-{{ govukDetails({
-  summaryText: "What to do if the customer has traveled from several countries?",
-  text: "If the customer has travelled from several countries, enter the one they have spent the most time in."
-}) }} -->
-                  
-<!-- <button class="govuk-button" data-module="govuk-button" onclick="check1()">
-  Continue
-</button> -->
             </form>
 
 <script>

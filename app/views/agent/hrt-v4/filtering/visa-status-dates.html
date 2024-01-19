@@ -1,7 +1,7 @@
 dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-   Leave
+    Share code
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,24 +30,31 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <span class="govuk-caption-l">Past presence</span>
+
+          <h1 class="govuk-heading-xl">Right to reside</h1>
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h2 class="govuk-fieldset__heading">
-        When were they abroad?
+        What are their share code details?
       </h2>
     </legend>
 
-    <br>
-    
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+        Share code
+      </label>
+      <div id="postcode-hint" class="govuk-hint">
+        For example, 3HJ-7YU-1K9.
+    </div>
+      <input class="govuk-input govuk-input--width-5" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+    </div>
+
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h2 class="govuk-fieldset__heading">
-            Start date
-          </h2>
+        <legend class="govuk-fieldset__legend">
+          When is their immigration status valid from?
         </legend>
         <div id="passport-issued-hint" class="govuk-hint">
           For example, 27 3 2007.
@@ -83,10 +90,8 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h2 class="govuk-fieldset__heading">
-            End date
-          </h2>
+        <legend class="govuk-fieldset__legend">
+          When does the share code expire?
         </legend>
         <div id="passport-issued-hint" class="govuk-hint">
           For example, 27 3 2007.
@@ -122,31 +127,38 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
   </fieldset>
 </div>
-
+              
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-            <div class="govuk-button-group">
-              {{ govukButton({
-                text: "Save and continue",
-                href: "/agent/hrt-v4/filtering/abroad-summary.html"
-              }) }}
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue",
+    href: "/agent/hrt-v4/filtering/presence.html"
+  }) }}
 
-              {{ govukButton({
-                text: "Save and come back later",
-                classes: "govuk-button--secondary",
-                href: "#"
-              }) }}
-            </div>
-           
+  {{ govukButton({
+    text: "Skip this question",
+    href: "/agent/hrt-v4/filtering/presence.html",
+    classes: "govuk-button--secondary"
+  }) }}
+</div>
+
+<!-- {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{{ govukDetails({
+  summaryText: "What to do if the customer has traveled from several countries?",
+  text: "If the customer has travelled from several countries, enter the one they have spent the most time in."
+}) }} -->
+                  
 <!-- <button class="govuk-button" data-module="govuk-button" onclick="check1()">
   Continue
-</button>
+</button> -->
             </form>
 
 <script>
 function check1() {
   console.log('in function')
-  var radios = document.getElementsByName("abroad");
+  var radios = document.getElementsByName("presence");
   var hasSelection = false
   for (var i = 0, len = radios.length; i < len; i++) {
     if (radios[i].checked) {
@@ -154,18 +166,21 @@ function check1() {
     }
   }
   if (!hasSelection) {
-    window.location.href = "/agent/hrt-v3/filtering/abroad-6months-3years-error.html";
+    window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/continue_application_error.html";
   } else {
-    if (document.getElementById("abroad-yes").checked) {
-        window.location.href = "/agent/hrt-v3/filtering/country.html"
-      } else {
-        window.location.href = "/agent/hrt-v3/filtering/exemptions.html.html"
-      }}}
-</script> -->
+    window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/confirm_residence.html"
+
+  }
+}
+</script>
 
         </div>
-      </div>
+
+</div>
  
+        </div>
+
+</div>
 
 {% endblock %}
 

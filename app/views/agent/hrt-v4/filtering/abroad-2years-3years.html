@@ -30,18 +30,19 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-xl">Past presence</h1>
+
+          <span class="govuk-caption-l">Past presence</span>
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h2 class="govuk-fieldset__heading">
-        Have they been abroad for 6 months or more in the last 3 years?
+        Have they been abroad in the last 156 weeks?
       </h2>
     </legend>
     
    <div id="nationality-hint" class="govuk-hint">
-    Select ‘Yes’ if they have spent 6 months or more outside the United Kingdom, the Isle of Man or the Channel Islands in the past 3 years. The 6 months do not need to be continuous.  </div>
+    Abroad means outside the UK, the Isle of Man or the Channel Islands. </div>
     
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
@@ -66,9 +67,15 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
   </fieldset>
 <br>
+
+<div class="govuk-button-group">
   <button class="govuk-button" data-module="govuk-button" onclick="check1()">
-    Continue
+    Save and continue
   </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Save and come back later
+  </button>
+</div>
 
 </div>
                   
@@ -85,7 +92,7 @@ function check1() {
     }
   }
   if (!hasSelection) {
-    window.location.href = "/agent/hrt-v3/filtering/abroad-6months-3years-error.html";
+    window.location.href = "/agent/hrt-v3/filtering/abroad-error.html";
   } else {
     if (document.getElementById("abroad-yes").checked) {
         window.location.href = "/agent/hrt-v4/filtering/country.html"

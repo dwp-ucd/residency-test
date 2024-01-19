@@ -30,17 +30,18 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-caption-l">Past presence</span>
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
+      <h2 class="govuk-fieldset__heading">
         Where did they travel to?
-      </h1>
+      </h2>
     </legend>
     
     <div id="dob-hint" class="govuk-hint">
-      Enter the last country that the customer went to before arriving to the UK.
+      You can add more trips later.
     </div>
     
       <div class="govuk-form-group">
@@ -52,13 +53,21 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
   </fieldset>
 </div>
-              
+
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Continue",
-  href: "/agent/hrt-v4/filtering/abroad-dates.html"
-}) }}
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Save and continue",
+                href: "/agent/hrt-v4/filtering/abroad-dates.html"
+              }) }}
+
+              {{ govukButton({
+                text: "Save and come back later",
+                classes: "govuk-button--secondary",
+                href: "#"
+              }) }}
+            </div>
 
 <!-- {% from "govuk/components/details/macro.njk" import govukDetails %}
 
