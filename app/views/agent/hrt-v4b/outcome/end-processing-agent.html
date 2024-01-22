@@ -27,6 +27,22 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
         <div class="govuk-grid-column-two-thirds">
 
+          <!-- <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Your response has been recorded
+    </h3>
+    <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p>
+  </div>
+</div> -->
+
 <div class="govuk-panel govuk-panel--confirmation">
   <h1 class="govuk-panel__title">
     Customer details submitted
@@ -44,7 +60,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {{ govukButton({
   text: "Send case",
-href: "/agent/hrt-v4b/outcome/end-processing-agent-1.html"
+href: "/agent/hrt-v4/outcome/end-processing-agent-1.html"
 
 }) }}
 
@@ -54,7 +70,10 @@ href: "/agent/hrt-v4b/outcome/end-processing-agent-1.html"
 
   <!-- <p class="govuk-body">You can buy:</p> -->
 <ul class="govuk-list govuk-list--bullet">
-  <li>none</li>
+  <li>nationality</li>
+  <li>immigration status</li>
+  <li>presence in the UK</li>
+  <li>travel abroad</li>
 
 </ul>
 </fieldset>

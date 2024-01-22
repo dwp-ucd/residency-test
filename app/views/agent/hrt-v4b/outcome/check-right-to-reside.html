@@ -1,7 +1,7 @@
 {% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-    Right to reside
+Information and evidence review
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,6 +30,8 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <span class="govuk-caption-l">Right to reside</span>
+
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       
@@ -37,30 +39,36 @@
             Information and evidence review
           </h1>
         </legend>
-
       </fieldset>
 
-      <dl class="govuk-summary-list">
-       
+      <!-- <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
            Benefit
           </dt>
-          
           <dd class="govuk-summary-list__value">
-            Pension Credit
+            Attendance Allowance
           </dd>
           <dd class="govuk-summary-list__actions">
-            <!-- <a class="govuk-link" href="/agent/hrt-v3/filtering/benefit.html">Change</a> -->
-          </dd> 
+         </dd> 
         </div>
-      </dl>  
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+           Date of claim
+          </dt>
+          <dd class="govuk-summary-list__value">
+            5 Jan 2024
+          </dd>
+          <dd class="govuk-summary-list__actions">
+         </dd> 
+        </div>
+      </dl>   -->
           
             <dl class="govuk-summary-list">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h1 class="govuk-fieldset__heading">
-                  Right to reside
-                </h1>
+                <h3 class="govuk-fieldset__heading">
+                  
+                </h3>
               </legend>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
@@ -68,58 +76,11 @@
                   </dt>
                   
                   <dd class="govuk-summary-list__value">
-                    French
+                    British
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <!-- <a class="govuk-link" href="#">Evidence required</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/benefit.html">Change</a> -->
-                    <!-- <a class="govuk-link" href="/agent/hrt-v3/filtering/nationality.html">Change</a> -->
-
-                  </dd> 
+               </dd> 
                 </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                   Immigration status
-                  </dt>
-                  
-                  <dd class="govuk-summary-list__value">
-                    EU pre-settled
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <!-- <a class="govuk-link" href="#">Evidence required</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/visa-status.html">Change</a> -->
-                    <!-- <a class="govuk-link" href="/agent/hrt-v3/filtering/visa-status.html">Change</a> -->
-
-                  </dd> 
-                </div>
-
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                   Share code
-                  </dt>
-                  
-                  <dd class="govuk-summary-list__value">
-                    9XY-6GY-2S2
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <!-- <a class="govuk-link" href="#">Evidence required</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/visa-status.html">Change</a> -->
-                    <!-- <a class="govuk-link" href="/agent/hrt-v3/filtering/share-code.html">Change</a> -->
-
-                  </dd> 
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                   Expiration date
-                  </dt>
-                  
-                  <dd class="govuk-summary-list__value">
-                    27 Dec 2023
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <!-- <a class="govuk-link" href="#">Evidence required</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/visa-status.html">Change</a> -->
-                    <!-- <a class="govuk-link" href="/agent/hrt-v3/filtering/share-code.html">Change</a> -->
-
-                  </dd> 
-                </div>
-              
             </dl>
 
             <div class="govuk-form-group">
@@ -134,35 +95,18 @@
                 </div>
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste">
-                      Passport
+                    <input class="govuk-checkboxes__input" id="waste" name="proof" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="proof-1">
+                      Proof of nationality
                     </label>
                   </div>
+                  <div class="govuk-checkboxes__divider">or</div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                      Proof of pre-settled or settled status through the EU Settlement Scheme
+                    <input class="govuk-checkboxes__input" id="countries-5" name="proof" type="checkbox" value="none" data-behaviour="exclusive">
+                    <label class="govuk-label govuk-checkboxes__label" for="proof-5">
+                     No evidence required
                     </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                      Proof of indefinite leave to enter (ILE) or remain in the UK (ILR)
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                      Proof of being exempt from immigration control
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                      Certificate of application
-                    </label>
-                  </div>
+                    </div>
                 </div>
               </fieldset>
             </div>
@@ -172,14 +116,14 @@
             <div class="govuk-button-group">
               {{ govukButton({
                 text: "Save and continue",
-                href: "/agent/hrt-v4/outcome/right-to-reside-decision.html"
+                href: "/agent/hrt-v4b/outcome/right-to-reside-decision.html"
 
               }) }}
 
               {{ govukButton({
                 text: "Save and exit",
                 classes: "govuk-button--secondary",
-                href: "/agent/hrt-v4/outcome/reference-number-saved.html"
+                href: "/agent/hrt-v4b/outcome/reference-number-save.html"
               }) }}
             </div>
 

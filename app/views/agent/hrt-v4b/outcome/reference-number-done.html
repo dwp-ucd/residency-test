@@ -40,7 +40,7 @@ Case tasks
     </legend>
     
     <div id="dob-hint" class="govuk-hint">
-      Enter the case reference number or benefit line to filter through the list and click on the reference number of the case you would like to enter.
+      Enter the case reference number or benefit line to filter through the list.
     </div>
 
     <div><input class="govuk-input govuk-input--width-10" id="country" name="country" type="text" autocomplete="country"></div>
@@ -53,8 +53,9 @@ Case tasks
       <select class="govuk-select" id="sort" name="sort">
         <option value="published">Recently added</option>
         <option value="updated" selected>Recently updated</option>
-        <option value="views">From A to Z</option>
-        <option value="comments">From Z to A</option>
+        <option value="comments">Reference number</option>
+        <option value="comments">Benefit line</option>
+        <option value="comments">Status</option>
       </select>
     </div>
 
@@ -70,8 +71,8 @@ Case tasks
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4/outcome/check-right-to-reside.html">HDJ2123F</a></th>
-            <td class="govuk-table__cell">Pension Credit</td>
+            <th scope="row" class="govuk-table__header"><a class="govuk-link" href="/agent/hrt-v4b/outcome/check-right-to-reside.html">HDJ2123F</a></th>
+            <td class="govuk-table__cell">Attendance Allowance</td>
             <td class="govuk-table__cell">
               <strong class="govuk-tag govuk-tag--green">
                 Completed
@@ -184,7 +185,7 @@ Case tasks
   ]
 }) }}
 
-<details class="govuk-details" data-module="govuk-details">
+<!-- <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       The case task I am searching for is not listed
@@ -196,7 +197,7 @@ Case tasks
     <br>
     If the case task is still not listed you can <a href="/agent/hrt-v4/outcome/reference-number-manual.html">enter the case reference number manually</a> instead.
   </div>
-</details>
+</details> -->
 
       <!-- <div>
         <a href="/agent/hrt-v4/outcome/reference-number-manual.html" class="govuk-body-m">The case task I am searching for is not listed

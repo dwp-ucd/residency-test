@@ -64,6 +64,21 @@ Case tasks
 
 <br>
 
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Sort by
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Recently added</option>
+    <option value="updated" selected>Recently updated</option>
+    <option value="comments">Reference number</option>
+    <option value="comments">Benefit line</option>
+    <option value="comments">Status</option>
+  </select>
+</div>
+
+<br>
+
 <table class="govuk-table">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
@@ -189,7 +204,7 @@ Case tasks
         ]
       }) }}
 
-      <details class="govuk-details" data-module="govuk-details">
+      <!-- <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             The case task I am searching for is not listed
@@ -201,7 +216,7 @@ Case tasks
           <br>
           If the case task is still not listed you can <a href="/agent/hrt-v4/outcome/reference-number-manual.html">enter the case reference number manually</a> instead.
         </div>
-      </details>
+      </details> -->
       
             <!-- <div>
               <a href="/agent/hrt-v4/outcome/reference-number-manual.html" class="govuk-body-m">The case task I am searching for is not listed

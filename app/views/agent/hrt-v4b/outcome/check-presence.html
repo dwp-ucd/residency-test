@@ -1,7 +1,7 @@
 {% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-    Presence
+Information and evidence review
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,6 +30,8 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <span class="govuk-caption-l">Presence</span>
+
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       
@@ -39,43 +41,26 @@
         </legend>
 
       </fieldset>
-
-      <dl class="govuk-summary-list">
-       
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-           Benefit
-          </dt>
-          
-          <dd class="govuk-summary-list__value">
-            Pension Credit
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <!-- <a class="govuk-link" href="/agent/hrt-v3/filtering/benefit.html">Change</a> -->
-          </dd> 
-        </div>
-      </dl>  
             
             <dl class="govuk-summary-list">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h1 class="govuk-fieldset__heading">
-                  Presence
-                </h1>
+                <h3 class="govuk-fieldset__heading">
+                  
+                </h3>
               </legend>
-              
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Presence
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                   Lives in the UK
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <!-- <a class="govuk-link" href="#">Evidence requried</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/presence.html">Change</a> -->
-                    <!-- <a class="govuk-link" href="/agent/hrt-v3/filtering/presence.html">Change</a> -->
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Lives in UK, Isle of Man or Channel Islands
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <!-- <a class="govuk-link" href="#">Evidence requried</a> <br> <br> <a class="govuk-link" href="/agent/hrt-v3/filtering/presence.html">Change</a> -->
+                  <!-- <a class="govuk-link" href="/agent/hrt-v4/filtering/presence.html">Change</a> -->
 
-                  </dd> 
-                </div>
+                </dd> 
+              </div>
             </dl>   
 
             <div class="govuk-form-group">
@@ -90,23 +75,18 @@
                 </div>
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste">
-                      Tax documents, such as P60 or P45 
+                    <input class="govuk-checkboxes__input" id="waste" name="proof" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="proof-1">
+                      Proof of presence in the UK, Isle of Man or Channel Islands
                     </label>
                   </div>
+                  <div class="govuk-checkboxes__divider">or</div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                      Council tax bills
+                    <input class="govuk-checkboxes__input" id="countries-5" name="proof" type="checkbox" value="none" data-behaviour="exclusive">
+                    <label class="govuk-label govuk-checkboxes__label" for="proof-3">
+                     No evidence required
                     </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                      Mortgage statements for a house or flat
-                    </label>
-                  </div>
+                    </div>
                 </div>
               </fieldset>
             </div>
@@ -114,14 +94,14 @@
             <div class="govuk-button-group">
               {{ govukButton({
                 text: "Save and continue",
-                href: "/agent/hrt-v4/outcome/presence-decision.html"
+                href: "/agent/hrt-v4b/outcome/presence-decision.html"
             
               }) }}
             
               {{ govukButton({
                 text: "Save and exit",
                 classes: "govuk-button--secondary",
-                href: "/agent/hrt-v4/outcome/reference-number-saved.html"
+                href: "/agent/hrt-v4b/outcome/reference-number-save.html"
               }) }}
             </div>
 

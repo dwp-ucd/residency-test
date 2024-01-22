@@ -36,7 +36,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Is more information required to determine if the customer is habitually resident?
+        Is more information required to determine their habitual residence?
       </h1>
     </legend>
   
@@ -44,7 +44,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="yes" name="type" type="radio" value="true">
         <label class="govuk-label govuk-radios__label" for="nationality">
-          Yes, I need to do a factual habitual residency test
+          Yes, I need to do additional checks
         </label>
         <!-- <div id="british-hint" class="govuk-hint govuk-radios__hint">Select if they are employed in England, Scotland, Wales or Northern Ireland.</div> -->
       </div>
@@ -62,9 +62,14 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 <div class="govuk-button-group">
   <button class="govuk-button" value= "true" data-module="govuk-button" onclick="check()">Save and continue</button>
-  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  <!-- <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
     Save and exit
-  </button>
+  </button> -->
+  {{ govukButton({
+    text: "Save and exit",
+    href: "/agent/hrt-v4b/outcome/reference-number-save.html",
+    classes: "govuk-button--secondary"
+  }) }}
 </div>
 
   <script>
@@ -78,12 +83,12 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
         }
       }
       if (!hasSelection) {
-        window.location.href = "/agent/hrt-v4/outcome/hab-res-information-error.html";
+        window.location.href = "/agent/hrt-v4b/outcome/hab-res-information-error.html";
       } else {
         if (document.getElementById("yes").checked) {
-          window.location.href = "/agent/hrt-v4/outcome/FHRT.html"
+          window.location.href = "/agent/hrt-v4b/outcome/FHRT.html"
         } else {
-          window.location.href = "/agent/hrt-v4/outcome/hab-res.html"
+          window.location.href = "/agent/hrt-v4b/outcome/hab-res.html"
         }}}
   </script>
        
