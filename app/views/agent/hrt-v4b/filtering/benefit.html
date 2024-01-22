@@ -1,7 +1,7 @@
 dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-Immigration status
+   Benefit
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,21 +31,21 @@ Immigration status
 <div class="govuk-grid-row">
 
         <div class="govuk-grid-column-two-thirds">
-          <span class="govuk-caption-l">Right to reside</span>
-        
+          <span class="govuk-caption-l">Claim details</span>
+
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Immigration status
+       Benefit claim details
       </h1>
     </legend>
 
-    <br>
+  <br>
 
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h2 class="govuk-fieldset__heading">
-        What is their immigration status?
+        Which benefit are they applying for?
       </h2>
     </legend>
     
@@ -53,83 +53,90 @@ Immigration status
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="nationality" name="nationality" type="radio" value="british">
         <label class="govuk-label govuk-radios__label" for="nationality">
-          EU pre-settled
+          Attendance Allowance
         </label>
-        <!-- <div id="british-hint" class="govuk-hint govuk-radios__hint">Select if they are from England, Scotland, Wales or Northern Ireland</div> -->
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="nationality-2" name="nationality" type="radio" value="irish">
         <label class="govuk-label govuk-radios__label" for="nationality-2">
-          EU settled
+          Carer's Allowance
         </label>
-         <!-- <div id="british-hint" class="govuk-hint govuk-radios__hint">Select if they are European</div> -->
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="nationality-2" name="nationality" type="radio" value="irish">
         <label class="govuk-label govuk-radios__label" for="nationality-2">
-          Indefinite leave to remain
+          Disability Living Allowance
         </label>
-         <!-- <div id="british-hint" class="govuk-hint govuk-radios__hint">Select if they are from the Republic of Ireland</div> -->
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="nationality-2" name="nationality" type="radio" value="irish">
         <label class="govuk-label govuk-radios__label" for="nationality-2">
-          Limited leave to remain
+          New Style Employment and Support Allowance
         </label>
-         <!-- <div id="british-hint" class="govuk-hint govuk-radios__hint">Select if they are from the Republic of Ireland</div> -->
       </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="nationality-2" name="nationality" type="radio" value="irish">
-      <label class="govuk-label govuk-radios__label" for="nationality-2">
-        Refugee
-      </label>
-       <!-- <div id="british-hint" class="govuk-hint govuk-radios__hint">Select if they are from the Republic of Ireland</div> -->
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nationality-2" name="nationality" type="radio" value="irish">
+        <label class="govuk-label govuk-radios__label" for="nationality-2">
+          Pension Credit
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nationality-2" name="nationality" type="radio" value="irish">
+        <label class="govuk-label govuk-radios__label" for="nationality-2">
+          Personal Independence Payment
+        </label>
+      </div>
     </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="nationality-2" name="nationality" type="radio" value="irish">
-      <label class="govuk-label govuk-radios__label" for="nationality-2">
-        Humanitarian protection
-      </label>
-       <!-- <div id="british-hint" class="govuk-hint govuk-radios__hint">Select if they are from the Republic of Ireland</div> -->
-    </div>
-    </div>
+
   </fieldset>
 </div>
 
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h1 class="govuk-fieldset__heading">
-        Do they have recourse to public funds?
+       Date of claim
       </h1>
     </legend>
-    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changedName">
-          Yes
-        </label>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 27 3 2007.
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
-          No
-        </label>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
       </div>
     </div>
   </fieldset>
 </div>
-
-             <!-- <button class="govuk-button" data-module="govuk-button" onclick="check()">
-  Continue
-</button> -->
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
             <div class="govuk-button-group">
               {{ govukButton({
                 text: "Save and continue",
-                href: "/agent/hrt-v4/filtering/visa-status-dates.html"
+                href: "/agent/hrt-v4b/filtering/nationality.html"
+
               }) }}
 
               {{ govukButton({
@@ -139,6 +146,10 @@ Immigration status
               }) }}
             </div>
 
+             <!-- <button class="govuk-button" data-module="govuk-button" onclick="check()">
+  Continue
+</button> -->
+           
 </form>
             <script>
           function check() {
@@ -157,11 +168,7 @@ Immigration status
         window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/presence.html"
       } else {
         window.location.href = "/citizen/habitual_residency_test/simple_hrt_v8a/nationality_question_2.html"
-      }
-
-  
-    }
-  }
+      }}}
               </script>
 
         </div>

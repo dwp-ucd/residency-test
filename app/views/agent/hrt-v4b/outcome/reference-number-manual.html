@@ -1,23 +1,23 @@
-dwp-res-prototype{% extends 'layout-agent.html' %}
+dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
 
 {% block pageTitle %}
-    Country
+    Reference number
 {% endblock %}
 
 {% block beforeContent %}
 
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Beta
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
     {{ super() }}
+
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Beta
+        </strong>
+        <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+        </span>
+      </p>
+    </div>
 
     {{ govukBackLink ({
         text: 'Back',
@@ -30,44 +30,35 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <span class="govuk-caption-l">Past presence</span>
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h2 class="govuk-fieldset__heading">
-        Where did they travel to?
-      </h2>
+      <h1 class="govuk-fieldset__heading">
+        Case reference number
+      </h1>
     </legend>
     
     <div id="dob-hint" class="govuk-hint">
-      You can add more trips later.
+      Enter the case reference number below.
     </div>
     
       <div class="govuk-form-group">
         <label class="govuk-label" for="country">
-          Country
+          Reference number
         </label>
         <input class="govuk-input govuk-input--width-10" id="country" name="country" type="text" autocomplete="country">
       </div>
 
   </fieldset>
 </div>
-
+              
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-            <div class="govuk-button-group">
-              {{ govukButton({
-                text: "Save and continue",
-                href: "/agent/hrt-v4/filtering/abroad-dates-2.html"
-              }) }}
-
-              {{ govukButton({
-                text: "Save and come back later",
-                classes: "govuk-button--secondary",
-                href: "#"
-              }) }}
-            </div>
+{{ govukButton({
+  text: "Find case",
+  href: "/agent/hrt-v4/outcome/no-case-match.html"
+}) }}
 
 <!-- {% from "govuk/components/details/macro.njk" import govukDetails %}
 
@@ -101,11 +92,6 @@ function check1() {
 </script>
 
         </div>
-
-</div>
- 
-        </div>
-
 </div>
 
 {% endblock %}

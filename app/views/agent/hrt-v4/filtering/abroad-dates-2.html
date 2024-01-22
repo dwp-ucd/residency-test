@@ -30,20 +30,24 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
 <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-xl">Past presence</h1>
+          <span class="govuk-caption-l">Past presence</span>
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h2 class="govuk-fieldset__heading">
-        When was the customer abroad?
+        When were they abroad?
       </h2>
     </legend>
+
+    <br>
     
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-        <legend class="govuk-fieldset__legend">
-          From
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Start date
+          </h2>
         </legend>
         <div id="passport-issued-hint" class="govuk-hint">
           For example, 27 3 2007.
@@ -79,8 +83,10 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
 
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-        <legend class="govuk-fieldset__legend">
-          To
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            End date
+          </h2>
         </legend>
         <div id="passport-issued-hint" class="govuk-hint">
           For example, 27 3 2007.
