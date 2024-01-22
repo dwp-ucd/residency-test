@@ -1,7 +1,7 @@
 dwp-res-prototype{% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-   End
+   Response recorded
 {% endblock %}
 
 {% block beforeContent %}
@@ -55,7 +55,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
   
   <div class="govuk-notification-banner__content">
     <h3 class="govuk-notification-banner__heading">
-      Your response regarding case <b> HDJ2123F </b> has been recorded. John Smith</b> is habitually resident.
+      Your response regarding case <b> HDJ2123F </b> has been recorded. John Smith</b> is not habitually resident.
     </h3>
     <!-- <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p> -->
   </div>
@@ -77,11 +77,11 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
       </h2>
     </div>
     <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-      <p class="govuk-body"><b>John Smith</b> has the right to reside in the UK.</p>
+      <p class="govuk-body"><b>John Smith</b> has the right to reside in the UK, Isle of Man or Channel Islands.</p>
       <p class="govuk-body">You have reviewed the following evidence:
         <ul class="govuk-list govuk-list--bullet">
-          <li>Passport</li>
-          <li>Proof of settled status</li>
+          <li>Proof nationality</li>
+          <li>Proof of immigration status</li>
           </ul>
       </p>
 
@@ -99,8 +99,7 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
       <p class="govuk-body"><b>John Smith</b> satisfies the presence conditions.</p>
       <p class="govuk-body">You have reviewed the following evidence:
         <ul class="govuk-list govuk-list--bullet">
-          <li>Tax documents</li>
-          <li>Council tax bills</li>
+          <li>Proof of presence in the UK, Isle of Man or Channel Islands</li>
           </ul>
       </p>
 
@@ -115,11 +114,10 @@ dwp-res-prototype{% extends 'layout-agent.html' %}
       </h2>
     </div>
     <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-      <p class="govuk-body"><b>John Smith</b> satisfies the past presence test.</p>
+      <p class="govuk-body"><b>John Smith</b> does not satisfy the past presence test.</p>
       <p class="govuk-body">You have reviewed the following evidence:
         <ul class="govuk-list govuk-list--bullet">
-          <li>Travel tickets</li>
-
+          <li>Proof of travel abroad</li>
           </ul>
       </p>
 
