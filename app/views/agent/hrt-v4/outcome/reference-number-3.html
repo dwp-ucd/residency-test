@@ -48,6 +48,21 @@ Case tasks
 
 <br>
 
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Sort by
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Recently added</option>
+    <option value="updated" selected>Recently updated</option>
+    <option value="comments">Reference number</option>
+    <option value="comments">Benefit line</option>
+    <option value="comments">Status</option>
+  </select>
+</div>
+
+<br>
+
 <table class="govuk-table">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
@@ -121,7 +136,7 @@ Case tasks
       <td class="govuk-table__cell">Pension Credit</td>
       <td class="govuk-table__cell">
         <strong class="govuk-tag govuk-tag--green">
-          Done
+          Completed
         </strong>
       </td>
 

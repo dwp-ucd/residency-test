@@ -41,10 +41,23 @@ dwp-res-prototype{% extends 'layout-agent-no-details.html' %}
 
 <div id="dob-hint" class="govuk-hint">
   Enter the case reference number or benefit line to filter through the list.
-
 </div>
 
 <div><input class="govuk-input govuk-input--width-10" id="country" name="country" type="text" autocomplete="country"></div>
+
+<br>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Sort by
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Recently added</option>
+    <option value="updated" selected>Recently updated</option>
+    <option value="comments">Reference number</option>
+    <option value="comments">Benefit line</option>
+    <option value="comments">Status</option>
+  </select>
+</div>
 
 <br>
 
