@@ -31,7 +31,20 @@
       <p class="govuk-body">
       Please <a class="govuk-link" href="#">contact Residency</a> if you need to update a temporary address.
       </p>
+
+      <br>
       
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+  
+  {{ govukButton({
+    text: "Back to current address",
+    href: "/agent/current-address.html"
+  }) }}
+
+</div>
+
        <!-- <p class="govuk-body"> When the functionality is available, you will have to start again.</p> -->
     </div>
   </div>
