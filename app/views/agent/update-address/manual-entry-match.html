@@ -31,8 +31,21 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-form-group">
-  <div class="govuk-notification-banner" role="region"
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Matching address found
+          </h1>
+        </legend>
+
+        <div class="govuk-inset-text">
+          55 Windsor Street <br> South Gosforth <br> Newcastle upon Tyne <br> NE3 1YL <br>
+          <br>
+          <strong class="govuk-tag govuk-tag--green">
+            Residential
+          </strong>
+        </div>
+
+  <!-- <div class="govuk-notification-banner" role="region"
   aria-labelledby="govuk-notification-banner-title"
   data-module="govuk-notification-banner">
   <div class="govuk-notification-banner__header">
@@ -52,73 +65,55 @@
     </td> </p>
     
   </div>
-</div>
+</div> -->
+<div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h1 class="govuk-fieldset__heading">
-        Do you want to use the address above?
+        Do you want to use this address?
       </h1>
     </legend>
-   <div id="changed-name-hint" class="govuk-hint">
-      If you select 'Yes', we will update your input from the previous screen with the address above instead.
-    </div>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="permanent" name="type" type="radio" value="true">
+        <input class="govuk-radios__input" id="match" name="type" type="radio" value="true">
         <label class="govuk-label govuk-radios__label" for="permanent">
-          Yes, update my input
+          Yes
         </label>
-        <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-          Select Yes, if you want us to update your input.
-        </div> -->
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="temporary" name="type" type="radio" value="false">
+        <input class="govuk-radios__input" id="no-match" name="type" type="radio" value="false">
         <label class="govuk-label govuk-radios__label" for="temporary">
-          No, keep my input
+          No, use the address I entered
         </label>
-        <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-          The customer is expecting to live at this address for less than 13 weeks.
-        </div> -->
       </div>
     </div>
     </fieldset>
+  </div>
 
-  <!-- <button class="govuk-button" value= "true" data-module="govuk-button" onclick="check()">Continue</button> -->
-</div>
-
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-  <div class="govuk-button-group">
+  <button class="govuk-button" value= "true" data-module="govuk-button" onclick="check()">Continue</button>
     
-    {{ govukButton({
-      text: "Continue",
-      href: "/agent/update-address/address-type-manual.html"
-    }) }}
-    </div>
-    
-<!-- <script>
+<script>
   function check() {
-    console.log(document.getElementById("yes"))
-
-    if (document.getElementById("address-line-1").value && document.getElementById("address-town").value && document.getElementById("address-postcode").value ) {
-      window.location.href = "/agent/update-address/address-type-manual.html"
-    } else {
-      window.location.href = "/agent/update-address/manual-entry-match-error.html"
+    console.log('in function')
+    var radios = document.getElementsByName("type");
+    var hasSelection = false
+    for (var i = 0, len = radios.length; i < len; i++) {
+      if (radios[i].checked) {
+        hasSelection = true;
+      }
     }
-
-  }
-</script> -->
-
-<!-- {{ govukButton({
-  text: "Continue",
-  href: "/agent/update-address/address-type.html"
-}) }} -->
+    if (!hasSelection) {
+      window.location.href = "/agent/update-address/manual-entry-match-error.html";
+    } else {
+      if (document.getElementById("match").checked) {
+        window.location.href = "/agent/update-address/address-type-manual.html"
+      } else {
+        window.location.href = "/agent/update-address/address-type-manual.html"
+      }}}
+</script>
 
             </form>
-
         </div>
-
 </div>
 
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'layout-agent.html' %}
 
 {% block pageTitle %}
-    Error - UK or International
+    Error - Address match
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,12 +18,12 @@
         </span>
       </p>
     </div>
-
+    
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
     <!-- <p style="float: right; margin-top:15px;" class="dwp-language-toggle" aria-label="Language toggle" > English | <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
       <a href="?lang=cy" class="govuk-link">Cymraeg</a> </p> -->
-      
+
 {% endblock %}
 
 {% block content %}
@@ -38,7 +38,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#UK-yes">Select yes if the new address is in the UK, Isle of Man or Channel Islands</a>
+          <a href="#match">Select if you want to use the matching address found or not</a>
         </li>
       </ul>
     </div>
@@ -46,43 +46,57 @@
 </div>
 
 <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-form-group govuk-form-group--error">
+      <div class="govuk-form-group govuk-form-group--error">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Matching address found
+          </h1>
+        </legend>
+
+        <div class="govuk-inset-text">
+          55 Windsor Street <br> South Gosforth <br> Newcastle upon Tyne <br> NE3 1YL <br>
+          <br>
+          <strong class="govuk-tag govuk-tag--green">
+            Residential
+          </strong>
+        </div>
+
+<div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h1 class="govuk-fieldset__heading">
-        Is the new permanent residential address in the UK, Isle of Man or Channel Islands?
+        Do you want to use this address?
       </h1>
     </legend>
-    <!-- <div id="changed-name-hint" class="govuk-hint">
-      Select Yes if the customer currently lives in England, Scotland, Wales, Northern Ireland, the Isle of Man or the Channel Islands.
-    </div> -->
-    <p id="where-do-you-live-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span>Select yes if the new address is in the UK, Isle of Man or Channel Islands
+    <p id="address-type-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span>Select if you want to use the matching address found or not
     </p>
-    <div class="govuk-radios govuk-radios--inline">
+    <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="UK-yes" name="UK" type="radio" value="true">
-        <label class="govuk-label govuk-radios__label" for="UK-yes">
+        <input class="govuk-radios__input" id="match" name="type" type="radio" value="true">
+        <label class="govuk-label govuk-radios__label" for="match">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="UK-no" name="UK" type="radio" value="false">
-        <label class="govuk-label govuk-radios__label" for="UK-no">
-          No
+        <input class="govuk-radios__input" id="no-match" name="type" type="radio" value="false">
+        <label class="govuk-label govuk-radios__label" for="no-match">
+          No, use the address I entered
         </label>
       </div>
     </div>
     </fieldset>
   </div>
+</div>
 
+  <button class="govuk-button" value= "true" data-module="govuk-button" onclick="check()">Continue</button>
 
 <script>
   function check() {
     console.log('in function')
-    var radios = document.getElementsByName("UK");
+    var radios = document.getElementsByName("type");
     var hasSelection = false
     for (var i = 0, len = radios.length; i < len; i++) {
       if (radios[i].checked) {
@@ -90,27 +104,17 @@
       }
     }
     if (!hasSelection) {
-      window.location.href = "/agent/update-address/uk-or-international-error.html";
+      window.location.href = "/agent/update-address/manual-entry-match-error.html";
     } else {
-      if (document.getElementById("UK-yes").checked) {
-        window.location.href = "/agent/update-address/update-address-1.html"
+      if (document.getElementById("match").checked) {
+        window.location.href = "/agent/update-address/address-type-manual.html"
       } else {
-        window.location.href = "/agent/update-address/international-address-update.html"
-      }
-
-
-    }
-  }
+        window.location.href = "/agent/update-address/address-type-manual.html"
+      }}}
 </script>
 
-
-
-<button class="govuk-button" value= "true" data-module="govuk-button" onclick="check()">Continue</button>
-
             </form>
-
         </div>
-
 </div>
 
 {% endblock %}
