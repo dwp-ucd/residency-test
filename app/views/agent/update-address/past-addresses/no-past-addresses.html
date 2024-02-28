@@ -28,8 +28,6 @@
 
 {% block content %}
 
-{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
-
 <!--<div id="nationality-hint" class="govuk-hint">
   This is a page filled with address and residency information on the citizen.
 </div>-->
@@ -38,74 +36,10 @@
 
         <div class="govuk-grid-column-two-thirds">
 
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            
-                <h1 class="govuk-fieldset__heading">
-                  Customer’s past addresses
-                </h1>
-              </legend>
-            </fieldset>
+      <h1 class="govuk-heading-l">Customer’s past addresses</h1>
 
-    <!-- <table class="govuk-table" id="addresses">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header"> Address information </th>
-          <th scope="col" class="govuk-table__header"> More details </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-    
-      </tbody>
-    </table> -->
-
-    <div class="govuk-inset-text">
-      No past addresses held for this customer.
-    </div>
+            <p class="govuk-body">There are no past addresses held for this customer.</p>
 <br>
-    
-<!-- 
-    {% from "govuk/components/pagination/macro.njk" import govukPagination %}
-
-{{ govukPagination({
-  next: {
-    href: "current-address-2"
-  },
-  items: [
-    {
-      number: 1,
-      current: true,
-      href: "current-address"
-    },
-    {
-      number: 2,
-      href: "current-address-2.html"
-    },
-    {
-      number: 3,
-      href: "current-address-3.html"
-    }
-  ]
-}) }} -->
-
-<!-- <nav class="govuk-pagination" role="navigation" aria-label="results">
-  <ul class="govuk-pagination__list" id="pagination-list">
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page" onclick="changePage(1)">
-        1
-      </a>
-    </li>
-  </ul>
-
-  <ul class="govuk-pagination__list" id="pagination-list">
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="/agent/all-past-addresses.html" aria-label="See all" aria-current="page" onclick="changePage(4)">
-        See all
-      </a>
-    </li>
-  </ul>
-</nav> -->
-
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-button-group">

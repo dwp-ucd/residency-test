@@ -31,9 +31,7 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-            <h2 class="govuk-heading-l">Confirm the address update</h2>
-
-        <form action="ca-end" method="post" class="form">
+            <h1 class="govuk-heading-l">Confirm the address update</h1>
             
             <dl class="govuk-summary-list">
                 <div class="govuk-summary-list__row">
@@ -41,7 +39,7 @@
                     New address
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    55 Windsor Street, South Gosforth, <br> Newcastle upon Tyne, NE3 1YL
+                    55 Windsor Street <br> South Gosforth <br> Newcastle upon Tyne <br> NE3 1YL
                   </dd>
                   <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="/agent/update-address/update-address-manual-entry.html">Change</a>
@@ -74,6 +72,21 @@
                   </dd> 
                   
                 </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Address stay reason
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{govukTag({
+                      text: "Residential",
+                      classes: "govuk-tag--grey"
+                    })}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="/agent/update-address/address-type-manual.html">Change</a>
+                  </dd> 
+                  
+                </div>
                 <br>
 
                 <div class="govuk-summary-list__row">
@@ -81,7 +94,7 @@
                     Previous address
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    18 Burdett House, Main Street, Guildford, GU79 6YW
+                    18 Burdett House <br> Main Street <br> Guildford <br> GU79 6YW
                   </dd>
                   <dd class="govuk-summary-list__actions">
                   </dd>
