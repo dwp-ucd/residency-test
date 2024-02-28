@@ -71,7 +71,12 @@
   </fieldset>
 </div>
 
-<div class="govuk-button-group">
+{{ govukButton({
+  text: "Continue",
+  href: "/agent/update-address/move-in-date-international.html"
+  }) }}
+
+<!-- <div class="govuk-button-group">
 <button class="govuk-button" value= "true" data-module="govuk-button" onclick="check()">Continue</button> 
 </div>
 
@@ -90,7 +95,7 @@
       } else {
         window.location.href = "/agent/update-address/move-in-date-international.html"
       }}
-</script>
+</script> -->
 
             </form>
         </div>
