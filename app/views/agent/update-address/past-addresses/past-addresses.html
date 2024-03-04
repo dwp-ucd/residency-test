@@ -43,17 +43,21 @@
       <caption class="govuk-table__caption govuk-table__caption--l">Customer’s past addresses</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header"> Address information </th>
-          <th scope="col" class="govuk-table__header"> More details </th>
+          <!-- <th scope="col" class="govuk-table__header"> Date </th> -->
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third"> Address</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half"> More details </th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell"> 23 Rose Cottage, Fair Street, <br> Telford, TY3 4HN <br> 12 Dec 2018 to 4 Jan 2021 </td>
+          <td class="govuk-table__cell"> 12 Dec 2018 to 4 Jan 2021 </td>
+          <td class="govuk-table__cell"> 23 Rose Cottage <br> Fair Street <br> Telford <br> TY3 4HN </td>
           <td class="govuk-table__cell">{{govukTag({
             text: "Permanent Residential",
             classes: "govuk-tag--green"
-          })}} <br> Updated 14 Dec 2018
+          })}}
+          <br> Updated 14 Dec 2018
             <!-- <br> Verified to <b><a class="govuk-link" href="https://www.gov.uk/government/publications/attributes-in-the-uk-digital-identity-and-attributes-trust-framework/how-to-score-attributes#show-how-reliable-the-attribute-is">Score 2</a></b>.  -->
           </td>
         </tr>
