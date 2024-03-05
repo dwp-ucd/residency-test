@@ -11,7 +11,7 @@
     <div class="govuk-phase-banner">
       <p class="govuk-phase-banner__content">
         <strong class="govuk-tag govuk-phase-banner__content__tag">
-          beta
+          Beta
         </strong>
         <span class="govuk-phase-banner__text">
           This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
@@ -55,7 +55,7 @@
                     20 May 2023
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/move-in-date.html">Change</a>
+                    <a class="govuk-link" href="/agent/update-address/move-in-date.html">Change<span class="govuk-visually-hidden"> start date</span></a>
                   </dd> 
                 </div>
                 
@@ -64,13 +64,12 @@
                     Address type
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    {{govukTag({
-                      text: "Permanent residential",
-                      classes: "govuk-tag--green"
-                    })}}
+                    <strong class="govuk-tag govuk-tag--green" style="max-width: none;">
+                      Permanent residential
+                    </strong>
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <!-- <a class="govuk-link" href="/agent/update-address/address-type.html">Change</a> -->
+                    <!-- <a class="govuk-link" href="/agent/update-address/address-type.html">Change<span class="govuk-visually-hidden"> address type</span></a> -->
                   </dd> 
                   
                 </div>
@@ -79,13 +78,12 @@
                     Address stay reason
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    {{govukTag({
-                      text: "Residential",
-                      classes: "govuk-tag--grey"
-                    })}}
+                    <strong class="govuk-tag govuk-tag--grey" style="max-width: none;">
+                      Residential
+                    </strong>
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="/agent/update-address/address-type.html">Change</a>
+                    <a class="govuk-link" href="/agent/update-address/address-type.html">Change<span class="govuk-visually-hidden"> address stay reason</span></a>
                   </dd> 
                   
                 </div>
